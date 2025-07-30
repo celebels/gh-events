@@ -1,5 +1,9 @@
 name: Events demo 1
-on: ...
+on: 
+  pull_request: #triggers workflows when a pull request is opened, synchronized, or reopened.
+    types:
+      - opened
+  workflow_dispatch:
 jobs:
   deploy:
     runs-on: ubuntu-latest
